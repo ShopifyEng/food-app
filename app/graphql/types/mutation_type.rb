@@ -1,10 +1,11 @@
 module Types
   class MutationType < Types::BaseObject
-    # TODO: remove me
-    field :test_field, String, null: false,
-      description: "An example field added by the generator"
-    def test_field
-      "Hello World"
-    end
+    field :food_create, mutation: Mutations::FoodCreate
+    field :food_delete, mutation: Mutations::FoodDelete
+    field :food_update, mutation: Mutations::FoodUpdate
+
+    field :nutrition_create, mutation: Mutations::NutritionCreate
+    field :nutrition_delete, mutation: Mutations::NutritionDelete
+    field :nutrition_update, mutation: Mutations::NutritionUpdate
   end
 end
